@@ -1,0 +1,60 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.1"
+    compileOptions.encoding = 'iso-8859-1'
+
+    defaultConfig {
+        applicationId "com.acme.push"
+        minSdkVersion 16
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+
+    /**
+     * Google APIs for Android
+     * https://developers.google.com/android/
+     */
+    compile 'com.google.android.gms:play-services-gcm:8.3.0'
+
+    /**
+     * Android Support Library
+     * https://developer.android.com/tools/support-library/index.html
+     */
+    compile 'com.android.support:appcompat-v7:23.1.0'
+    compile 'com.android.support:design:23.1.0'
+
+    /**
+     * okhttp
+     * An HTTP+SPDY client for Android and Java applications.
+     * https://github.com/square/okhttp
+     */
+    compile 'com.squareup.okhttp:okhttp:2.5.0'
+
+    /**
+     * GSON
+     * https://github.com/google/gson
+     */
+    compile 'com.google.code.gson:gson:2.3.1'
+
+    /**
+     * butterknife
+     * View "injection" library for Android.
+     * http://jakewharton.github.io/butterknife/
+     */
+    compile 'com.jakewharton:butterknife:7.0.1'
+}

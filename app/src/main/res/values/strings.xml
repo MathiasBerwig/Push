@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Push Remote</string>
+    <string name="title_activity_main">Push Remote</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string name="username">Username</string>
+    <string name="register">Register</string>
+    <string name="unregister">Unregister</string>
+    <string name="last_message">Last message</string>
+    <string name="clear">Clear</string>
+</resources>
